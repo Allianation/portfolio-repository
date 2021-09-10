@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Navigation from "./Navigation";
+import Navigation from './Navigation';
 
 const SidebarStyled = styled.div`
     width: 16.3rem;

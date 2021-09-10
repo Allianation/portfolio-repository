@@ -1,9 +1,9 @@
-import Sidebar from "./components/Sidebar";
+import Sidebar from './components/Sidebar';
 
 const App = () => {
-  return (
-    <Sidebar />
-  );
+    return (
+        <Sidebar />
+    );
 };
 
 export default App;

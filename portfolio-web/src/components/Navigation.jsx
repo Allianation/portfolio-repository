@@ -104,7 +104,7 @@ const Navigation = () => {
                 <p>@2021 <b>Allianation</b></p>
             </footer>
         </NavigationStyled>
-    )
-}
+    );
+};
 
 export default Navigation;
