@@ -1,14 +1,8 @@
-import styled from 'styled-components';
-
-const AppStyled = styled.div`
-  background-color: red;
-`;
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
-    <AppStyled>
-      <h1>Styled componets</h1>
-    </AppStyled>
+    <Sidebar />
   );
 };
 
