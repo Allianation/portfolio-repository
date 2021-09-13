@@ -14,10 +14,18 @@ const SidebarStyled = styled.div`
     }
 `;
 
+const navItems = [
+    {name: 'Home', to: '/portfolio-repository/'},
+    {name: 'About', to: '/portfolio-repository/about'},
+    {name: 'Blog', to: '/portfolio-repository/blog'},
+    {name: 'Services', to: '/portfolio-repository/services'},
+    {name: 'Contacts', to: '/portfolio-repository/contacts'}
+];
+
 const Sidebar = () => {
     return (
         <SidebarStyled>
-            <Navigation />
+            <Navigation navItems={navItems}/>
         </SidebarStyled>
     );
 };

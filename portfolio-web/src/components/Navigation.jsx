@@ -51,7 +51,7 @@ const NavigationStyled = styled.nav`
                     width: 0;
                     height: 50%;
                     background-color: var( --primary-color);
-                    transition: All 0.4s cubic-bezier(1,-0.2,.25,.95) ;
+                    transition: all 0.4s cubic-bezier(1,-0.2,.25,.95) ;
                     opacity: 0.21;
                     z-index: -1;
                 }
@@ -74,34 +74,28 @@ const NavigationStyled = styled.nav`
     }
 `;
 
-const Navigation = () => {
+const Navigation = (props) => {
+    const { 
+        // eslint-disable-next-line react/prop-types
+        navItems = [],
+    } = props;
+    
+    const listItems = navItems.map((navItem, index) =>
+        <li className="nav-item" key={index}>
+            <NavLink to={navItem.to} activeClassName="active-class" exact>{navItem.name}</NavLink>
+        </li>
+    );
+
     return (
         <NavigationStyled>
             <div className="avatar">
                 <img src={avatar} alt=""/>
             </div>
             <ul className="nav-items">
-                <li className="nav-item">
-                    <NavLink to="/" activeClassName="active-class" exact>Home</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to="/about" activeClassName="active-class" exact>About</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to="/resume" activeClassName="active-class" exact>Resume</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to="/blogs" activeClassName="active-class" exact>Blogs</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
-                </li>
+                {listItems}
             </ul>
             <footer className="footer">
-                <p>@2021 <b>Allianation</b></p>
+                <p>&copy; Allianation 2021</p>
             </footer>
         </NavigationStyled>
     );
