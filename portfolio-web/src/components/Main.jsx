@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const MainStyled = styled.div`
     position: relative;
@@ -26,11 +26,19 @@ const MainStyled = styled.div`
 `;
 
 const Main = (props) => {
+    const { 
+        component: ChildrenComponent,
+    } = props;
+
     return (
         <MainStyled>
-            {props.children}
+            <ChildrenComponent/>
         </MainStyled>
     );
+};
+
+Main.propTypes = {
+    component: PropTypes.func.isRequired
 };
 
 export default Main;

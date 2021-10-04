@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import avatar from '../img/avatar.png';
 
@@ -76,7 +77,6 @@ const NavigationStyled = styled.nav`
 
 const Navigation = (props) => {
     const { 
-        // eslint-disable-next-line react/prop-types
         navItems = [],
     } = props;
     
@@ -99,6 +99,10 @@ const Navigation = (props) => {
             </footer>
         </NavigationStyled>
     );
+};
+
+Navigation.propTypes = {
+    navItems: PropTypes.array.isRequired, 
 };
 
 export default Navigation;

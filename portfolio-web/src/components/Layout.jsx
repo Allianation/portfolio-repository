@@ -1,22 +1,28 @@
-import { Route } from 'react-router';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { Route } from 'react-router';
 import Sidebar from './Sidebar';
 import Main from './Main';
 
 const LayoutStyled = styled.div``;
 
-// eslint-disable-next-line react/prop-types
-const Layout = ({component:Component}) => {
+const Layout = (props) => {
+    const { 
+        component: ReceivedComponent,
+    } = props;
+    
     return (  
         <Route render = {() => (
             <LayoutStyled>
                 <Sidebar/>
-                <Main>
-                    <Component/>
-                </Main>
+                <Main component={ReceivedComponent}/>
             </LayoutStyled>
         )}/>
     );  
+};
+
+Layout.propTypes = {
+    component: PropTypes.func.isRequired, 
 };
 
 export default Layout;
