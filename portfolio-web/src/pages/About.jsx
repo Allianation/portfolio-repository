@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Title from '../components/Title';
 import ImageSection from '../components/ImageSection';
 import SkillSection from '../components/SkillsSection';
+import Title from '../components/Title';
 
 const AboutStyled = styled.section`
     padding: 3rem;

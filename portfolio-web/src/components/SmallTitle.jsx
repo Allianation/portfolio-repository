@@ -18,8 +18,8 @@ const SmallTitleStyled = styled.div`
 
 const SmallTitle = (props) => {
     const { 
-        icon= '',
-        title= '',
+        icon,
+        title,
     } = props;
 
     return (

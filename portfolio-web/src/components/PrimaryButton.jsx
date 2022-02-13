@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const PrimaryButtonStyled = styled.a`
     background-color: var(--primary-color);

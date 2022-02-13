@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 import avatar from '../img/avatar.png';
 
 const NavigationStyled = styled.nav`

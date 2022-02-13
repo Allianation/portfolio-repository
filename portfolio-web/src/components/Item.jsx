@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const ItemStyled = styled.div`
     display: flex;
@@ -56,10 +56,10 @@ const ItemStyled = styled.div`
 
 const Item = (props) => {
     const { 
-        year= '',
-        title= '',
-        subtitle= '',
-        text= '',
+        year,
+        title,
+        subtitle,
+        text,
     } = props;
 
     return (

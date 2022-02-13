@@ -1,8 +1,8 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router';
-import Sidebar from './Sidebar';
+import styled from 'styled-components';
 import Main from './Main';
+import Sidebar from './Sidebar';
 
 const LayoutStyled = styled.div``;
 

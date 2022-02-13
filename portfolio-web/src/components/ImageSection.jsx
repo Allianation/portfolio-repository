@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import PrimaryButton from './PrimaryButton';
 import about from '../img/about.jpg';
+import PrimaryButton from './PrimaryButton';
 
 const ImageSectionStyled = styled.div`
     margin-top: 5rem;
@@ -17,6 +17,7 @@ const ImageSectionStyled = styled.div`
             width: 95%;
             height:100%;
             object-fit: cover;
+            opacity: 0.8;
         }
     }
     .right-content {

@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import TelegramIcon from '@material-ui/icons/Telegram';
 import GithubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import TelegramIcon from '@material-ui/icons/Telegram';
+import styled from 'styled-components';
 
 const HomeStyled = styled.header`
     width: 100%;

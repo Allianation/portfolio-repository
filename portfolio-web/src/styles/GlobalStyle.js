@@ -123,6 +123,11 @@ const GlobalStyle = createGlobalStyle`
         color: var(--white-color);
         }
     }
+
+    .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
+        background-color: #ffffff !important;
+    }
+  
 `;
 
 export default GlobalStyle;

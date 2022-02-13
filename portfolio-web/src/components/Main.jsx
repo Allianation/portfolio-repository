@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Switch from '@material-ui/core/Switch';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
+import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 const MainStyled = styled.div`
     position: relative;

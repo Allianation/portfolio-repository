@@ -39,8 +39,8 @@ const TitleStyled = styled.div`
 
 const Title = (props) => {
     const { 
-        span = '',
-        title = '',
+        span,
+        title,
     } = props;
 
     return (

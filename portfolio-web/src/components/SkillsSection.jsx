@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import Title from './Title';
-import SkillCard from './SkillCard';
-import ReactLogo from '../img/react-logo96.svg';
 import AngularLogo from '../img/angular-logo96.svg';
+import ReactLogo from '../img/react-logo96.svg';
 import VueLogo from '../img/vue-logo96.svg';
+import Card from './Card';
+import Title from './Title';
 
-const SkillSectionStyled = styled.section`
+const SkillSectionStyled = styled.div`
     margin-top: 5rem;
     .skills {
         margin-top: 5rem;
@@ -30,19 +30,19 @@ const SkillSection = () => {
         <SkillSectionStyled>
             <Title title={'Skills'} span={'skills'} />
             <div className="skills">
-                <SkillCard 
+                <Card 
                     image={ReactLogo} 
                     title={'Web Design'} 
                     paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
                 />
                 <div className="mid-card">
-                    <SkillCard 
+                    <Card 
                         image={AngularLogo} 
                         title={'Artificial Intelligence'} 
                         paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}
                     />
                 </div>
-                <SkillCard 
+                <Card 
                     image={VueLogo} 
                     title={'Game Development'} 
                     paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem tenetur ratione quod.'}

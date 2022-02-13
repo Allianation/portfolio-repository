@@ -1,7 +1,7 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const SkillCardStyled = styled.div`
+const CardStyled = styled.div`
     background-color: var(--background-dark-grey);
     border-left: 1px solid var(--border-color);
     border-top: 8px solid var(--border-color);
@@ -36,28 +36,28 @@ const SkillCardStyled = styled.div`
     }
 `;
 
-const SkillCard = (props) => {
+const Card = (props) => {
     const { 
-        image = '',
-        title = '',
-        paragraph = '',
+        image,
+        title,
+        paragraph,
     } = props;
 
     return (
-        <SkillCardStyled>
+        <CardStyled>
             <div className="container">
                 <img src={image} alt="" />
                 <h4>{title}</h4>
                 <p>{paragraph}</p>
             </div>
-        </SkillCardStyled>
+        </CardStyled>
     );
 };
 
-SkillCard.propTypes = {
+Card.propTypes = {
     image: PropTypes.string.isRequired, 
     title: PropTypes.string.isRequired, 
     paragraph: PropTypes.string.isRequired, 
 };
 
-export default SkillCard;
+export default Card;

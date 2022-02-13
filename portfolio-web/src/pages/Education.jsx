@@ -1,11 +1,11 @@
-import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+import SchoolIcon from '@material-ui/icons/School';
 import styled from 'styled-components';
 import Item from '../components/Item';
 import SmallTitle from '../components/SmallTitle';
 import Title from '../components/Title';
 import l10n from '../data/Experience';
 
-const ExperienceStyled = styled.section`
+const EducationStyled = styled.section`
     padding: 3rem;
     .small-title {
         margin-top: 5rem;
@@ -14,13 +14,13 @@ const ExperienceStyled = styled.section`
     .small-title-margin {
         margin-top: 4rem;
     }
-    .experience-content {
+    .education-content {
         border-left: 2px solid var(--border-color);
     }
 `;
 
-const Experience = () => {
-    const briefcase = <BusinessCenterIcon />;
+const Education = () => {
+    const school = <SchoolIcon />;
     const lang = 'en';
 
     const listItems = l10n['items'][lang].map((expItem, index) =>
@@ -31,18 +31,18 @@ const Experience = () => {
             text={expItem.text} 
         />
     );
-   
+
     return (
-        <ExperienceStyled>
-            <Title title={'Experience'} span={'Experience'} />
+        <EducationStyled>
+            <Title title={'Education'} span={'Education'} />
             <div className="small-title small-title-margin">
-                <SmallTitle icon={briefcase} title={l10n['title'][lang]} />
+                <SmallTitle icon={school} title={'Educational Qualifications'} />
             </div>
-            <div className="experience-content">
+            <div className="education-content">
                 {listItems}
             </div>
-        </ExperienceStyled>
+        </EducationStyled>
     );
 };
 
-export default Experience;
+export default Education;
