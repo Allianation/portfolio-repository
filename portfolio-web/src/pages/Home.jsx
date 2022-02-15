@@ -1,7 +1,6 @@
-import GithubIcon from '@material-ui/icons/GitHub';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TelegramIcon from '@material-ui/icons/Telegram';
+import ReactTypingEffect from 'react-typing-effect';
 import styled from 'styled-components';
+import l10n from '../data/Home';
 
 const HomeStyled = styled.header`
     width: 100%;
@@ -51,28 +50,54 @@ const HomeStyled = styled.header`
             }
         }
     }
+    .typingClassName {
+        font-weight: bold;
+        margin-top:15px;
+    }
+    .typingClassName div{
+        font-size 2rem;
+        margin-top:15px;
+        margin-bottom:15px;
+    }
+    .typingClassName span{
+        font-size 2rem;
+        margin-top:15px;
+        margin-bottom:15px;
+    }
 `;
 
 const Home = () => {
+    const lang = 'en';
+
+    const typingText = [
+        'FRONTEND DEVELOPER',
+        'BACKEND DEVELOPER',
+        'FREELANCE DEVELOPER',
+        'WEB DESIGNER',
+    ];
+
+    const linksList = l10n['links'][lang].map((link, index) =>
+        <a key={index} href={link.href} className={link.className}>
+            {link.icon}
+        </a>
+    );
+
     return (
         <HomeStyled>
             <div className="typography">
-                <h1>Hi, I&apos;m <span>Lorem Ipsum</span></h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Atque nihil voluptates ea dolore vel 
-                    repellat? Quia tenetur non quam exercitationem. Lorem ipsum dolor sit amet.
-                </p>
+                <h1>{l10n['text'][lang]} <span>Allianation</span></h1>
+               
+                <ReactTypingEffect
+                    text={typingText}
+                    className='typingClassName'
+                    speed= {200}
+                    eraseSpeed= {200}
+                    eraseDelay={1500}
+                    typingDelay={1500}
+                />
+                
                 <div className="icons">
-                    <a href="https://codepen.io/pen/" className="icon i-telegram">
-                        <TelegramIcon />
-                    </a>
-                    <a href="https://codepen.io/pen/" className="icon i-github">
-                        <GithubIcon />
-                    </a>
-                    <a href="https://codepen.io/pen/" className="icon i-instagram">
-                        <InstagramIcon />
-                    </a>
+                    {linksList}
                 </div>
             </div>
         </HomeStyled>
