@@ -15,7 +15,7 @@ const MainStyled = styled.div`
 
 const Main = (props) => {
     const { 
-        component: ChildrenComponent,
+        component: ReceivedComponent,
     } = props;
 
     const [theme, setTheme] = useState('dark-theme');
@@ -55,7 +55,7 @@ const Main = (props) => {
                 </div>
             </div>
 
-            <ChildrenComponent/>
+            <ReceivedComponent/>
         </MainStyled>
     );
 };

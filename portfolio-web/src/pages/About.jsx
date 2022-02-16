@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import ImageSection from '../components/ImageSection';
-import SkillSection from '../components/SkillsSection';
+import Information from '../components/Information';
+import Skills from '../components/Skills';
 import Title from '../components/Title';
 
 const AboutStyled = styled.section`
@@ -11,8 +11,8 @@ const About = () => {
     return (
         <AboutStyled>
             <Title title={'About Me'} span={'About Me'} />
-            <ImageSection />
-            <SkillSection />
+            <Information />
+            <Skills />
         </AboutStyled>
     );
 };

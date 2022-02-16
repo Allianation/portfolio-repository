@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import l10n from '../data/About';
 import about from '../img/about.jpg';
 import PrimaryButton from './PrimaryButton';
 
-const ImageSectionStyled = styled.div`
+const InformationStyled = styled.div`
     margin-top: 5rem;
     display: flex;
     @media screen and (max-width:1000px) {
@@ -50,42 +51,39 @@ const ImageSectionStyled = styled.div`
     }
 `;
 
-const ImageSection = () => {
+const Information = () => {
+    const lang = 'en';
+
+    const infoTitleList = l10n['infoTitle'][lang].map((infloTitle, index) =>
+        <p key={index}>{infloTitle}</p>
+    );
+
+    const infoList = l10n['info'][lang].map((info, index) =>
+        <p key={index}>{info}</p>
+    );
+    
     return (
-        <ImageSectionStyled>
+        <InformationStyled>
             <div className="left-content">
                 <img src={about} alt=""/>
             </div>
             <div className="right-content">
-                <h4>I am <span>Lorem Ipsum</span></h4>
+                <h4>{l10n['title'][lang]} <span>Allianation</span></h4>
                 <p className="paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, natus quas vero enim 
-                    praesentium delectus est id fugiat ab libero adipisci recusandae at maxime veritatis! 
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi, nesciunt.
-                    
+                    {l10n['paragraph'][lang]}  
                 </p>
                 <div className="about-info">
                     <div className="info-title">
-                        <p>Full Name</p>
-                        <p>Age</p>
-                        <p>Nationality </p>
-                        <p>Languages </p>
-                        <p>Location</p>
-                        <p>Service</p>
+                        {infoTitleList}
                     </div>
                     <div className="info">
-                        <p>: Lorem Ipsum</p>
-                        <p>: 36</p>
-                        <p>: Spainsh </p>
-                        <p>: Spanish, French, English </p>
-                        <p>: London, United Kingdom</p>
-                        <p>: Freelance</p>
+                        {infoList}
                     </div>
                 </div>
                 <PrimaryButton title={'Download Cv'} />
             </div>
-        </ImageSectionStyled>
+        </InformationStyled>
     );
 };
 
-export default ImageSection;
+export default Information;

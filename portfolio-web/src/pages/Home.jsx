@@ -69,13 +69,6 @@ const HomeStyled = styled.header`
 const Home = () => {
     const lang = 'en';
 
-    const typingText = [
-        'FRONTEND DEVELOPER',
-        'BACKEND DEVELOPER',
-        'FREELANCE DEVELOPER',
-        'WEB DESIGNER',
-    ];
-
     const linksList = l10n['links'][lang].map((link, index) =>
         <a key={index} href={link.href} className={link.className}>
             {link.icon}
@@ -88,7 +81,7 @@ const Home = () => {
                 <h1>{l10n['text'][lang]} <span>Allianation</span></h1>
                
                 <ReactTypingEffect
-                    text={typingText}
+                    text={l10n['typingText'][lang]}
                     className='typingClassName'
                     speed= {200}
                     eraseSpeed= {200}

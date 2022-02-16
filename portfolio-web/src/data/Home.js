@@ -4,6 +4,20 @@ import TelegramIcon from '@material-ui/icons/Telegram';
 
 const l10n = {
     'text': {'en': 'Hi, I\'m', 'es': 'Hola, Soy'},
+    'typingText': {
+        'en': [
+            'FRONTEND DEVELOPER',
+            'BACKEND DEVELOPER',
+            'FREELANCE DEVELOPER',
+            'WEB DESIGNER',
+        ],
+        'es': [
+            'FRONTEND DEVELOPER',
+            'BACKEND DEVELOPER',
+            'FREELANCE DEVELOPER',
+            'WEB DESIGNER',
+        ]    
+    },
     'links': {
         'en': [
             {
