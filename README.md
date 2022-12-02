@@ -1,2 +1,2 @@
 # portfolio-repository
-React JS proyect for portfolio
+React JS project for portfolio
